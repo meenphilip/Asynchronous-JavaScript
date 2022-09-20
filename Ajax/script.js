@@ -25,8 +25,13 @@ function loadData() {
     //check status
     if (this.status === 200) {
       console.log(this.responseText);
-      ouputEl.innerText = this.responseText;
+      ouputEl.innerHTML = `<h1>${this.responseText}</h1>`;
     }
+  };
+
+  // Error Handling
+  xhr.onerror = function () {
+    console.log("request rerror...");
   };
 
   //call send()
