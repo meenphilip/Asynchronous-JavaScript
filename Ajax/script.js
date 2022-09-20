@@ -1,4 +1,5 @@
 btnEl = document.getElementById("btn");
+ouputEl = document.getElementById("output");
 
 btnEl.addEventListener("click", loadData);
 
@@ -10,15 +11,21 @@ function loadData() {
 
   xhr.open("GET", "data.txt", true);
 
-  console.log("READSTATE", xhr.readyState);
+  console.log("READYSTATE:", xhr.readyState);
+
+  // optional -> used for spinners or loaders
+  xhr.onprogress = function () {
+    console.log("onprogress READYSTATE:", xhr.readyState);
+  };
 
   // call onload()
   xhr.onload = function () {
     // check READSTATE
-    console.log("READSTATE", xhr.readyState);
+    console.log("READYSTATE:", xhr.readyState);
     //check status
     if (this.status === 200) {
       console.log(this.responseText);
+      ouputEl.innerText = this.responseText;
     }
   };
 
