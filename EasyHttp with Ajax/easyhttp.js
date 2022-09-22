@@ -41,5 +41,21 @@ easyHTTP.prototype.post = function (url, data, callback) {
 };
 
 // Make an HTTP PUT Requst
+easyHTTP.prototype.put = function (url, data, callback) {
+  //XMLHttpRequest open()
+  this.http.open("PUT", url, true);
+
+  // set header
+  this.http.setRequestHeader("Content-Type", "application/json");
+
+  //XMLHttpRequest onload()
+  const SELF = this;
+  this.http.onload = function () {
+    callback(null, SELF.http.responseText);
+  };
+
+  //XMLHttpRequest send()
+  this.http.send(JSON.stringify(data));
+};
 
 // Make an HTTP DELETE Requst
