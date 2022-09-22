@@ -38,14 +38,26 @@ const data = {
 // );
 
 // update post with PUT
-http.put(
+// http.put(
+//   "https://jsonplaceholder.typicode.com/posts/1",
+//   data,
+//   function (err, post) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(post);
+//     }
+//   },
+// );
+
+//Delete Request
+http.delete(
   "https://jsonplaceholder.typicode.com/posts/1",
-  data,
-  function (err, post) {
+  function (err, response) {
     if (err) {
       console.log(err);
     } else {
-      console.log(post);
+      console.log(response);
     }
   },
 );
