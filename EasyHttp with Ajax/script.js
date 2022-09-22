@@ -1,3 +1,4 @@
+//create object
 const http = new easyHTTP();
 
 //Get posts
@@ -21,7 +22,7 @@ const http = new easyHTTP();
 // create data
 const data = {
   title: "custom post",
-  body: "(UPDATED)eveniet quo quis\nlaborum totam consequatur non dolor",
+  body: "(UPDATED) this is a custom post body",
 };
 
 // post
