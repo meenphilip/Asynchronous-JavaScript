@@ -8,7 +8,7 @@ easyHTTP.prototype.get = function (url, callback) {
   //XMLHttpRequest open()
   this.http.open("GET", url, true);
 
-  ////XMLHttpRequest onload()
+  //XMLHttpRequest onload()
   const SELF = this;
   this.http.onload = function () {
     if (SELF.http.status === 200) {
@@ -23,6 +23,22 @@ easyHTTP.prototype.get = function (url, callback) {
 };
 
 // Make an HTTP POST Requst
+easyHTTP.prototype.post = function (url, data, callback) {
+  //XMLHttpRequest open()
+  this.http.open("POST", url, true);
+
+  // set header
+  this.http.setRequestHeader("Content-Type", "application/json");
+
+  //XMLHttpRequest onload()
+  const SELF = this;
+  this.http.onload = function () {
+    callback(null, SELF.http.responseText);
+  };
+
+  //XMLHttpRequest send()
+  this.http.send(JSON.stringify(data));
+};
 
 // Make an HTTP PUT Requst
 
