@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Meen Tycoon",
+    "company": "JKUAT",
+    "phone": 124354363
+  },
+  {
+    "id": 2,
+    "name": "Akili Tito",
+    "company": "SPA",
+    "phone": 124354363
+  },
+  {
+    "id": 3,
+    "name": "Usher Raymond",
+    "company": "KU",
+    "phone": 124354363
+  },
+  {
+    "id": 4,
+    "name": "Yunis Hassan",
+    "company": "KCA",
+    "phone": 124354363
+  },
+  {
+    "id": 5,
+    "name": "Ted Mack",
+    "company": "ALX",
+    "phone": 124354363
+  }
+]
