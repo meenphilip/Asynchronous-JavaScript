@@ -7,16 +7,32 @@ const http = new EasyHTTP();
 //   .then((data) => console.log(data))
 //   .catch((err) => console.error(err));
 
+// //create user
+// const user = {
+//   name: "Meen",
+//   username: "Tycoon",
+//   email: "meen@yahoo.com",
+//   phone: 123456789,
+// };
+
+// //Post method
+// http
+//   .post("https://jsonplaceholder.typicode.com/users", user)
+//   .then((data) => console.log(data))
+//   .catch((err) => console.error(err));
+
 //create user
 const user = {
+  userId: 11,
   name: "Meen",
   username: "Tycoon",
   email: "meen@yahoo.com",
   phone: 123456789,
+  website: "jkuat.com",
 };
 
-//Post method
+//Put method (update user)
 http
-  .post("https://jsonplaceholder.typicode.com/users", user)
+  .put("https://jsonplaceholder.typicode.com/users/1", user)
   .then((data) => console.log(data))
   .catch((err) => console.error(err));
